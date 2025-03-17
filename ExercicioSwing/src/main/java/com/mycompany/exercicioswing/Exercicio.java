@@ -432,7 +432,7 @@ public class Exercicio extends javax.swing.JDialog {
             if(JOptionPane.showConfirmDialog(this, "Deseja alterar essa linha?") == JOptionPane.YES_OPTION){
                 TextDigitarNome.setText(tabelaRelatorio.getValueAt(linha, coluna++).toString());
                 ComboCidade.setSelectedItem(tabelaRelatorio.getValueAt(linha, coluna++).toString());
-                if(tabelaRelatorio.getValueAt(linha, coluna++).toString() == "Windows"){
+                if(tabelaRelatorio.getValueAt(linha, coluna++).toString().equals("Windows")){
                     ButtonWindows.setSelected(true);
                     ButtonWindowsActionPerformed(evt);
                     ComboVersao.setSelectedItem(tabelaRelatorio.getValueAt(linha, coluna++).toString());
@@ -441,14 +441,14 @@ public class Exercicio extends javax.swing.JDialog {
                     ButtonLinuxActionPerformed(evt);
                     ComboVersao.setSelectedItem(tabelaRelatorio.getValueAt(linha, coluna++).toString());
                 }
-                if(tabelaRelatorio.getValueAt(linha, coluna++).toString() == "AMD"){
+                if(tabelaRelatorio.getValueAt(linha, coluna++).toString().equals("AMD")){
                     buttonAmd.setSelected(true);
                 }else{
                     buttonIntel.setSelected(true);
                 }
-                if(tabelaRelatorio.getValueAt(linha, coluna).toString() == "320 GB"){
+                if(tabelaRelatorio.getValueAt(linha, coluna).toString().equals("320 GB")){
                     Check320.setSelected(true);
-                }else if(tabelaRelatorio.getValueAt(linha, coluna).toString() == "500 GB"){
+                }else if(tabelaRelatorio.getValueAt(linha, coluna).toString().equals("500 GB")){
                     Check500.setSelected(true);
                 }else{
                     Check1TB.setSelected(true);
@@ -472,7 +472,7 @@ public class Exercicio extends javax.swing.JDialog {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Metal".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
