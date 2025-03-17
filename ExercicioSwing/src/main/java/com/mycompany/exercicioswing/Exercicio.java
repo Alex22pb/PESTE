@@ -404,7 +404,7 @@ public class Exercicio extends javax.swing.JDialog {
         LabelNome.setForeground(Color.black);
         String msgErro =  "";
         if(TextDigitarNome.getText().isEmpty()){
-            msgErro = msgErro + "Digite seu nome\n";
+            msgErro = msgErro + "Digite um nome válido.\n";
             LabelNome.setForeground(Color.red);
         }
         
