@@ -4,6 +4,7 @@
  */
 package com.mycompany.trabalhopoo2_alunos;
 
+import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.Image;
 import java.io.File;
@@ -40,18 +41,18 @@ public class CadastroAluno extends javax.swing.JDialog {
 
         GrupoSexo = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelNome = new javax.swing.JLabel();
         txtBairro = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         labelFoto = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jLabelData = new javax.swing.JLabel();
+        jLabelCPF = new javax.swing.JLabel();
+        TextFieldDataNas = new javax.swing.JFormattedTextField();
+        TextFieldCPF = new javax.swing.JFormattedTextField();
         jPanel3 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        jButton1cadastro = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         txtCEP = new javax.swing.JFormattedTextField();
@@ -76,7 +77,7 @@ public class CadastroAluno extends javax.swing.JDialog {
         jLabel16 = new javax.swing.JLabel();
         txtCidade = new javax.swing.JTextField();
         txtRua = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        TextNome = new javax.swing.JTextField();
         buttonImagem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -84,8 +85,8 @@ public class CadastroAluno extends javax.swing.JDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cadastro de Aluno", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 14), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Nome:  ");
+        jLabelNome.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNome.setText("Nome:  ");
 
         txtBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,31 +111,31 @@ public class CadastroAluno extends javax.swing.JDialog {
             .addComponent(labelFoto, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
         );
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Dat. Nasc:");
+        jLabelData.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelData.setText("Dat. Nasc:");
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CPF:");
+        jLabelCPF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCPF.setText("CPF:");
 
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            TextFieldDataNas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldDataNas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
+                TextFieldDataNasActionPerformed(evt);
             }
         });
 
         try {
-            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            TextFieldCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField2.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField2ActionPerformed(evt);
+                TextFieldCPFActionPerformed(evt);
             }
         });
 
@@ -181,12 +182,12 @@ public class CadastroAluno extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\TrabalhoPOO2_Alunos\\src\\main\\resource\\Imagens\\icons8-ok-16.png")); // NOI18N
-        jButton1.setText("Cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton1cadastro.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1cadastro.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\TrabalhoPOO2_Alunos\\src\\main\\resource\\Imagens\\icons8-ok-16.png")); // NOI18N
+        jButton1cadastro.setText("Cadastrar");
+        jButton1cadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton1cadastroActionPerformed(evt);
             }
         });
 
@@ -291,17 +292,15 @@ public class CadastroAluno extends javax.swing.JDialog {
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Bairro: ");
 
-        txtCidade.setEnabled(false);
-
         txtRua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtRuaActionPerformed(evt);
             }
         });
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        TextNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                TextNomeActionPerformed(evt);
             }
         });
 
@@ -322,15 +321,15 @@ public class CadastroAluno extends javax.swing.JDialog {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(132, 132, 132)
-                                .addComponent(jButton1)
+                                .addComponent(jButton1cadastro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
+                                    .addComponent(jLabelNome)
+                                    .addComponent(jLabelData)
+                                    .addComponent(jLabelCPF)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel15))
                                 .addGap(40, 40, 40)
@@ -340,12 +339,12 @@ public class CadastroAluno extends javax.swing.JDialog {
                                             .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addComponent(txtCidade, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                                                .addComponent(jFormattedTextField2, javax.swing.GroupLayout.Alignment.LEADING)))
+                                                .addComponent(TextFieldCPF, javax.swing.GroupLayout.Alignment.LEADING)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(TextFieldDataNas, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(TextNome, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE)))))
                         .addGap(11, 11, 11))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -412,16 +411,16 @@ public class CadastroAluno extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelData)
+                            .addComponent(TextFieldDataNas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabelCPF)
+                            .addComponent(TextFieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,7 +480,7 @@ public class CadastroAluno extends javax.swing.JDialog {
                     .addComponent(jFormattedTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(jButton1cadastro)
                     .addComponent(jButton2))
                 .addGap(22, 22, 22))
         );
@@ -510,21 +509,17 @@ public class CadastroAluno extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBairroActionPerformed
 
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+    private void TextFieldDataNasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldDataNasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+    }//GEN-LAST:event_TextFieldDataNasActionPerformed
 
-    private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed
+    private void TextFieldCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldCPFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField2ActionPerformed
+    }//GEN-LAST:event_TextFieldCPFActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jFormattedTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField5ActionPerformed
         // TODO add your handling code here:
@@ -546,9 +541,9 @@ public class CadastroAluno extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRuaActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void TextNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_TextNomeActionPerformed
 
     private void txtCEPFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCEPFocusLost
 //        try {
@@ -572,7 +567,40 @@ public class CadastroAluno extends javax.swing.JDialog {
         colocarFoto();//COLOCAR IMAGEM
     }//GEN-LAST:event_buttonImagemActionPerformed
 
-    public void colocarFoto(){//COLOCAR IMAGEM
+    private void jButton1cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1cadastroActionPerformed
+        // TODO add your handling code here:
+        if(validarCampo()){
+        
+        }
+    }//GEN-LAST:event_jButton1cadastroActionPerformed
+ 
+    private boolean validarCampo(){
+        String mensgErro = "";
+        
+        if(TextNome.getText().isEmpty()){
+            mensgErro = mensgErro + "Digite um nome válido\n";
+            jLabelNome.setForeground(Color.red);
+        }
+        
+        if(Ajuda.isCPF(TextFieldCPF.getText()) == false){
+            mensgErro = mensgErro + "Digite um CPF válido\n";
+            jLabelCPF.setForeground(Color.red);
+        }
+        
+        if(TextFieldDataNas.getText().isEmpty()){
+            mensgErro = mensgErro + "Digite uma data de nascimento válido\n";
+            jLabelData.setForeground(Color.red);
+        }
+        
+        if(mensgErro.isEmpty()){
+            return true;
+        }else{
+            JOptionPane.showMessageDialog(this, mensgErro, "Cadastro de aluno", JOptionPane.INFORMATION_MESSAGE);
+            return false;
+        }
+    }
+    
+    private void colocarFoto(){//COLOCAR IMAGEM
         JFileChooser janArq = new JFileChooser();
         
         janArq.setAcceptAllFileFilterUsed(false);
@@ -652,17 +680,17 @@ public class CadastroAluno extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup GrupoSexo;
+    private javax.swing.JFormattedTextField TextFieldCPF;
+    private javax.swing.JFormattedTextField TextFieldDataNas;
+    private javax.swing.JTextField TextNome;
     private javax.swing.JButton buttonImagem;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton1cadastro;
     private javax.swing.JButton jButton2;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JFormattedTextField jFormattedTextField4;
     private javax.swing.JFormattedTextField jFormattedTextField5;
     private javax.swing.JFormattedTextField jFormattedTextField6;
     private javax.swing.JFormattedTextField jFormattedTextField7;
     private javax.swing.JFormattedTextField jFormattedTextField8;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -670,13 +698,14 @@ public class CadastroAluno extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelCPF;
+    private javax.swing.JLabel jLabelData;
+    private javax.swing.JLabel jLabelNome;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -685,7 +714,6 @@ public class CadastroAluno extends javax.swing.JDialog {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JLabel labelFoto;
     private javax.swing.JTextField txtBairro;
     private javax.swing.JFormattedTextField txtCEP;
